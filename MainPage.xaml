@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="CalculatorNotes.MainPage"
+    BackgroundColor="White">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Calculator &amp; Notes"
+               FontSize="28"
+               HorizontalOptions="Center"
+               TextColor="Black" />
+
+        <Entry x:Name="CalculatorInput"
+               Placeholder="Enter calculation"
+               Keyboard="Numeric"
+               FontSize="18" />
+
+        <Button Text="Calculate"
+                FontSize="18"
+                Clicked="OnCalculateClicked" />
+
+        <Label x:Name="CalculatorResult"
+               Text="Result: "
+               FontSize="20"
+               TextColor="DarkBlue" />
+
+        <Editor x:Name="NotesEditor"
+                Placeholder="Write notes here..."
+                AutoSize="TextChanges"
+                HeightRequest="200"
+                BackgroundColor="#F0F0F0"
+                FontSize="16" />
+
+    </VerticalStackLayout>
+</ContentPage>
